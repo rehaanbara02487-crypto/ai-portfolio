@@ -3,7 +3,12 @@ export const site = {
   title: "AI Engineer • Full-Stack Builder",
   tagline: "AI Engineer • Full-Stack Builder",
   location: "Remote · UTC+5:30",
-  email: "rehaanbara02487@gmail.com",
+  email: "team@beingai.space",
+  contact: {
+    label: "Business & Collaborations",
+    subtitle:
+      "Available for AI projects, SaaS development, automation systems, and collaborations.",
+  },
   resumePath: "/Rehaan_Bara_Resume.pdf",
   socials: {
     github: "https://github.com/rehaanbara02487-crypto",

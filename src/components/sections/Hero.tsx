@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { site } from "@/content/site";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { DownloadResumeButton } from "@/components/ui/DownloadResumeButton";
+import { BusinessContactCard } from "@/components/ui/BusinessContactCard";
 import { ArrowDown } from "lucide-react";
 import gsap from "gsap";
 
@@ -138,17 +139,7 @@ export function Hero() {
                       LLM apps · Full‑stack · Security · Cloud
                     </div>
                   </div>
-                  <div className="rounded-2xl border border-[rgba(255,255,255,.10)] bg-[rgba(255,255,255,.03)] p-4">
-                    <div className="text-xs tracking-[0.18em] text-white/55">
-                      EMAIL
-                    </div>
-                    <a
-                      href={`mailto:${site.email}`}
-                      className="mt-1 block text-sm text-white/85 hover:text-white"
-                    >
-                      {site.email}
-                    </a>
-                  </div>
+                  <BusinessContactCard variant="compact" />
                 </div>
               </div>
             </motion.div>

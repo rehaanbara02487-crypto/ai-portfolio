@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { site } from "@/content/site";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { BusinessContactCard } from "@/components/ui/BusinessContactCard";
 import { Send } from "lucide-react";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -18,14 +19,14 @@ export function Contact() {
       id="contact"
       eyebrow="CONTACT"
       title="Let’s build something premium."
-      subtitle="Tell me what you’re shipping. I’ll reply with a crisp plan + timeline."
+      subtitle="Partner with BeingAI for intelligent products, automation systems, and premium SaaS experiences."
     >
-      <div className="grid gap-6 md:grid-cols-[1.05fr_.95fr]">
+      <div className="grid gap-7 lg:grid-cols-[1.05fr_.95fr]">
         <Reveal>
           <div className="glow-border">
-            <div className="glass rounded-3xl p-6">
+            <div className="glass rounded-3xl p-6 md:p-7">
               <form
-                className="grid gap-3"
+                className="grid gap-4"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   setStatus("sending");
@@ -44,15 +45,17 @@ export function Contact() {
                     });
                     if (!res.ok) throw new Error("Failed");
                     setStatus("sent");
-                    setMessage("Received. I’ll reply shortly.");
+                    setMessage("Received. We’ll reply shortly.");
                     (e.currentTarget as HTMLFormElement).reset();
                   } catch {
                     setStatus("error");
-                    setMessage("Something went wrong. Please email me directly.");
+                    setMessage(
+                      `Something went wrong. Please email us at ${site.email}.`
+                    );
                   }
                 }}
               >
-                <div className="grid gap-3 sm:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2">
                   <label className="grid gap-2">
                     <span className="text-xs tracking-[0.18em] text-white/55">
                       NAME
@@ -91,13 +94,8 @@ export function Contact() {
                   />
                 </label>
 
-                <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
-                  <div className="text-sm text-white/65">
-                    Or email:{" "}
-                    <a className="text-white hover:underline" href={`mailto:${site.email}`}>
-                      {site.email}
-                    </a>
-                  </div>
+                <div className="mt-1 flex flex-wrap items-center justify-between gap-4">
+                  <BusinessContactCard variant="inline" />
                   <MagneticButton variant="primary" className="min-w-[170px]">
                     {status === "sending" ? "Sending..." : "Send Message"}{" "}
                     <Send size={16} />
@@ -107,7 +105,7 @@ export function Contact() {
                 {message ? (
                   <div
                     className={[
-                      "mt-2 rounded-2xl border px-4 py-3 text-sm",
+                      "mt-1 rounded-2xl border px-4 py-3 text-sm",
                       status === "sent"
                         ? "border-[rgba(74,163,255,.25)] bg-[rgba(74,163,255,.06)] text-white/85"
                         : "border-[rgba(255,255,255,.14)] bg-[rgba(255,255,255,.04)] text-white/75",
@@ -123,32 +121,26 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="grid gap-4">
-            <div className="glass glow-border rounded-3xl p-6">
+          <div className="grid gap-5">
+            <BusinessContactCard />
+
+            <div className="glass glow-border rounded-3xl p-6 md:p-7">
               <div className="text-xs tracking-[0.22em] text-white/55">
                 WHAT YOU GET
               </div>
-              <ul className="mt-4 grid gap-2">
+              <ul className="mt-4 grid gap-2.5">
                 {[
                   "Clear scope + milestones",
                   "Production-grade architecture choices",
                   "Fast iteration with premium polish",
                   "Security + performance as defaults",
                 ].map((x) => (
-                  <li key={x} className="text-sm text-white/70 leading-7">
+                  <li key={x} className="text-sm leading-7 text-white/70">
                     <span className="mr-2 inline-block h-1.5 w-1.5 translate-y-[-1px] rounded-full bg-[rgba(74,163,255,.9)] shadow-[0_0_18px_rgba(74,163,255,.55)]" />
                     {x}
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="rounded-3xl border border-[rgba(255,255,255,.12)] bg-[rgba(255,255,255,.02)] p-6">
-              <div className="text-xs tracking-[0.22em] text-white/55">
-                RESPONSE TIME
-              </div>
-              <div className="mt-3 text-sm text-white/75">
-                Typically within 24 hours.
-              </div>
             </div>
           </div>
         </Reveal>
@@ -156,4 +148,3 @@ export function Contact() {
     </Section>
   );
 }
-

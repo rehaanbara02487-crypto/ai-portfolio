@@ -3,8 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { site } from "@/content/site";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import { GithubIcon } from "@/components/icons/GithubIcon";
+import { BusinessContactCard } from "@/components/ui/BusinessContactCard";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -80,6 +81,13 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-2 md:flex">
+            <a
+              href={`mailto:${site.email}`}
+              aria-label={`Email ${site.email}`}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(255,255,255,.14)] bg-[rgba(255,255,255,.03)] text-white/80 transition-[color,border-color,box-shadow] duration-300 hover:border-[rgba(74,163,255,.35)] hover:text-white hover:shadow-[0_0_20px_rgba(74,163,255,.18)]"
+            >
+              <Mail size={16} />
+            </a>
             {socials.map(({ href, label, Icon }) => (
               <a
                 key={label}
@@ -127,6 +135,12 @@ export function Navbar() {
                       {it.label}
                     </a>
                   ))}
+                </div>
+                <div className="mt-3 px-2">
+                  <BusinessContactCard
+                    variant="compact"
+                    onNavigate={() => setOpen(false)}
+                  />
                 </div>
                 <div className="mt-3 flex items-center gap-2 px-2">
                   {socials.map(({ href, label, Icon }) => (
