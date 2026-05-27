@@ -5,7 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { site } from "@/content/site";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { ArrowDown, Download } from "lucide-react";
+import { DownloadResumeButton } from "@/components/ui/DownloadResumeButton";
+import { ArrowDown } from "lucide-react";
 import gsap from "gsap";
 
 const HeroScene = dynamic(() => import("@/components/three/HeroScene"), {
@@ -99,9 +100,7 @@ export function Hero() {
               >
                 View Projects <ArrowDown size={16} />
               </MagneticButton>
-              <MagneticButton href={site.resumePath} variant="secondary" download>
-                Download Resume <Download size={16} />
-              </MagneticButton>
+              <DownloadResumeButton />
             </div>
           </div>
 

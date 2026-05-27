@@ -14,11 +14,11 @@ Update your name, hero text, skills, projects, experience, services, socials, an
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Then open `http://localhost:3001`.
 
 ### Resume download
 
-Replace the file `public/resume.pdf` with your real resume (keep the same filename), or update `resumePath` in `src/content/site.ts`.
+Replace the file `public/Rehaan_Bara_Resume.pdf` with your updated resume (keep the same filename), or update `resumePath` in `src/content/site.ts`.
 
 ### Contact form
 

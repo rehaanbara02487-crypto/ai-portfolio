@@ -4,7 +4,7 @@ export const site = {
   tagline: "AI Engineer • Full-Stack Builder",
   location: "Remote · UTC+5:30",
   email: "rehaanbara02487@gmail.com",
-  resumePath: "/resume.pdf",
+  resumePath: "/Rehaan_Bara_Resume.pdf",
   socials: {
     github: "https://github.com/rehaanbara02487-crypto",
   },
@@ -14,7 +14,7 @@ export const site = {
       "Building intelligent AI solutions, automation tools, and modern web experiences that solve real-world problems.",
     ctas: [
       { label: "View Projects", href: "#projects" },
-      { label: "Download Resume", href: "/resume.pdf", download: true },
+      { label: "Download Resume", href: "/Rehaan_Bara_Resume.pdf", download: true },
     ],
   },
   about: {
