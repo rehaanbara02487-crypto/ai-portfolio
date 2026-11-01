@@ -68,9 +68,9 @@ export function About() {
               </div>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {[
-                  ["Cinematic UX", "Motion systems that feel expensive."],
+                  ["Practical Solutions", "Real-world problem solving."],
                   ["Production-first", "Evals, monitoring, and reliability."],
-                  ["Security-aware", "Guardrails, auth, and auditability."],
+                  ["Code Quality", "Clean architecture and maintainability."],
                   ["Performance budgets", "Fast loads, smooth interactions."],
                 ].map(([t, d]) => (
                   <div

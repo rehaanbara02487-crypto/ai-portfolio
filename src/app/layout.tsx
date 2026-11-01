@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     template: "%s · AI Engineer",
   },
   description:
-    "Premium cinematic AI engineer portfolio featuring modern full-stack + ML work, projects, services, and contact.",
+    "Premium AI engineer portfolio featuring modern full-stack development, AI systems, automation, and practical software projects.",
   metadataBase: new URL("https://beingai.space"),
   openGraph: {
     title: "AI Engineer — Premium Portfolio",
     description:
-      "Cinematic AI engineer portfolio with premium UI, projects, experience, and services.",
+      "AI engineer portfolio with premium UI, projects, experience, and services.",
     type: "website",
   },
   robots: {

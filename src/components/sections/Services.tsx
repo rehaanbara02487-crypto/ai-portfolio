@@ -13,7 +13,7 @@ export function Services() {
       title="Services"
       subtitle="High-value offerings with a premium SaaS feel — no fluff."
     >
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {site.services.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.06}>
             <motion.div

@@ -136,7 +136,7 @@ export function Hero() {
                       SPECIALTY
                     </div>
                     <div className="mt-1 text-sm text-white/85">
-                      LLM apps · Full‑stack · Security · Cloud
+                      LLM apps · Full‑stack · Automation · APIs
                     </div>
                   </div>
                   <BusinessContactCard variant="compact" />

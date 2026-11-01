@@ -19,7 +19,7 @@ export function Contact() {
       id="contact"
       eyebrow="CONTACT"
       title="Let’s build something premium."
-      subtitle="Partner with BeingAI for intelligent products, automation systems, and premium SaaS experiences."
+      subtitle="Partner for intelligent products, automation systems, and premium software experiences."
     >
       <div className="grid gap-7 lg:grid-cols-[1.05fr_.95fr]">
         <Reveal>
